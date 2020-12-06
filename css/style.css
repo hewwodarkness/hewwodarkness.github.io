@@ -1,0 +1,18 @@
+body {
+    background: gray;
+
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.div {
+    background-color: gray;
+}
+#image_and_config {
+    background: black;
+}
+#image_st_twt {
+    background: black;
+}
