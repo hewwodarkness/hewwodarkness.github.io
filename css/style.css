@@ -1,18 +1,137 @@
 body {
-    background: gray;
-
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    -webkit-font-smoothing: antialiased;
+    background-color: white;
 }
+body {
+	background: linear-gradient(-45deg, white, gray, white, gray);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .container{
     width: 100%;
-    max-width: 1000px;
+    max-width: 1170px;
     margin: 0 auto;
+    padding: 35px 0;
+    border-bottom: 1px solid black;
 }
-.div {
-    background-color: gray;
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
-#image_and_config {
-    background: black;
+
+.features__item {
+    width: 30%;
+    padding: 0 10px;
+    margin: 10px 0;
+    text-align: center;
 }
-#image_st_twt {
-    background: black;
+.features__item1 {
+    width: 17,5%;
+    padding: 0 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+.features__icon {
+    margin-bottom: 5px;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+
+ul {
+    list-style-type: circle
+}
+
+.two_icons {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.intro {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 5px;
+    
+}
+
+.alert.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bcdff1;  
+    margin-bottom: 25px;  
+}
+
+.alert {
+    padding: 15px;
+    border-left: 5px solid transparent;
+    position: relative;
+    text-align: left;
+}
+
+.alert-title {
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+}
+
+.alert .alert-title {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.alert-description {
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+}
+
+.alert .alert-description {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.currentdevices {
+    color: #ea98dc;
+    font-size: 64px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.currentdevicesimg {
+    width: 17,5%;
+    width: 150px;
+    height: 150px;
+    padding: 0 40px;
+    text-align: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.currentdevicesitem {
+    text-align: center;
 }
