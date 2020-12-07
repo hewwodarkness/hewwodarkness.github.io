@@ -42,15 +42,34 @@ body {
     margin-top: 5px;
     border-bottom: 1px solid black;
 }
+.menutest{
+    float: center;   
+}
 
 .features1 {
     display: flex;
     width: 100%;
     max-width: 1170px;
-    margin: 0 auto;
+    margin: auto auto;
     border-bottom: 1px solid black;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;    
+}
 
+.jsbtn {
+    background-color:#31708f;
+    border: none;
+    color: white;
+    padding: 9px 12px; 
+    font-size: 16px;
+    cursor: pointer; 
+    float: right;
+}
+
+.jsbtn:hover {
+    background-color: DodgerBlue;
+    opacity: 1;
 }
 
 .currentdevicesitem1 {
