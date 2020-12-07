@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     color: black;
     -webkit-font-smoothing: antialiased;
@@ -41,9 +41,11 @@ body {
     margin: auto;
     margin-top: 5px;
     border-bottom: 1px solid black;
+    font-family: 'Nunito', sans-serif;
 }
 .menutest{
     float: center;   
+    font-family: 'Nunito', sans-serif;
 }
 
 .features1 {
@@ -121,8 +123,8 @@ body {
 
 .settings_icon {
     margin-bottom: 5px;
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     float: left;
 }
 
@@ -144,6 +146,7 @@ body {
     max-width: 1170px;
     margin: auto;
     margin-top: 5px;
+    font-family: 'Nunito', sans-serif;
     
 }
 
@@ -174,7 +177,7 @@ body {
 }
 
 .alert-description {
-    font-family: "Roboto", Sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
 }
 
@@ -212,3 +215,16 @@ body {
     padding-right: 30px;
 }
 
+.settings__title{
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.setth4{
+    font-family: 'Nunito', sans-serif;
+    margin-block-start: 0px;
+    margin-block-end: 0em;
+    margin-inline-end: 0px;
+    margin-bottom: 10px;
+}
