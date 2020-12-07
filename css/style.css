@@ -85,8 +85,7 @@ body {
 }
 
 .csplayers {
-    width: 25%;
-    width: 200px;
+width: 40%;
     opacity: initial;
     padding: 0 40px;
     text-align: center;
@@ -254,6 +253,10 @@ a {
     text-align: center;
     object-fit: cover;
     overflow: hidden;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
 }
 
 .currentdevicesitem {
