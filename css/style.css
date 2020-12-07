@@ -5,6 +5,16 @@ body {
     color: black;
     -webkit-font-smoothing: antialiased;
     background-color: white;
+    opacity: 0;
+	transition: 1s;
+	animation: show 2s 1;
+       animation-fill-mode: forwards;
+}
+
+@keyframes show{
+ 0%{ opacity:0; }
+ 100% { opacity:1; }
+
 }
 
 .iconsetting{
@@ -60,12 +70,35 @@ body {
 
 .currentdevicesitem1 {
     width: 17,5%;
-    width: 150px;
+    width: 250px;
 
     padding: 0 40px;
     text-align: center;
     object-fit: cover;
     overflow: hidden;
+}
+
+.csfeatures {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.csplayers {
+    width: 25%;
+    width: 200px;
+    opacity: initial;
+    padding: 0 40px;
+    text-align: center;
+    opacity: 0;
+	transition: 1s;
+	animation: show 2s 1;
+       animation-fill-mode: forwards;
+}
+
+@keyframes show{
+ 0%{ opacity:0; }
+ 100% { opacity:1; }
 }
 
 a { 
@@ -87,6 +120,8 @@ a {
 
 .features__title{
     font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+
 }
 
 .features__item {
@@ -198,6 +233,16 @@ a {
     width: 150px;
     height: 150px;
     padding: 0 40px;
+    text-align: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.csplayersimg {
+    width: 17,5%;
+    width: 150px;
+    height: 150px;
+    padding: 0 0px;
     text-align: center;
     object-fit: cover;
     overflow: hidden;
