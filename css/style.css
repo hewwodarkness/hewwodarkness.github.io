@@ -121,7 +121,15 @@ a {
 .features__title{
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
+    word-wrap: normal
 
+}
+
+.devices__title{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    word-wrap: normal;
+    width: 230px;
 }
 
 .features__item {
@@ -250,6 +258,7 @@ a {
 
 .currentdevicesitem {
     text-align: center;
+    
 }
 
 .settings1 {
