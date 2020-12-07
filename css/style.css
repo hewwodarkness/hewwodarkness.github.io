@@ -38,7 +38,29 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 35px 0;
+    margin: auto;
+    margin-top: 5px;
     border-bottom: 1px solid black;
+}
+
+.features1 {
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+.currentdevicesitem1 {
+    width: 17,5%;
+    width: 150px;
+
+    padding: 0 40px;
+    text-align: center;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .features {
