@@ -14,78 +14,65 @@
 </head>
 <body>
   
-<!-- Header -->
-<div class="header">
-    <div class="container">
-        <h2>Portfolio</h2>
-    </div>
-</div>
-<!-- Menu -->
+
 
 <!-- Features -->
-<div class="intro">
-    <h2 class="currentdevices">My projects</h2>
-    <!-- Features -->
-    <div class="features">
-        <a href="playerssettings/index.html">
-            <div class="currentdevicesitem">
-                <img class="currentdevicesimg" src="img/anime1.gif" alt="">
-                <h1 class="devices__title">Players Settings</h1>
-            </div>
-        </a>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/anime2.gif" alt="">
-            <h1 class="devices__title">Gallery</h1>
+<section class="work" id="work">
+  <div class="container">
+    <h2 class="title__sections darck wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <span class="light">
+        take a look at
+      </span> Remmi's work
+    </h2>
+    <div class="line__sections wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <p class="work__text wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.
+    </p>
+    <div class="work__logo wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="work__logos">
+        <div class="logos__item">
+        <img src="img/work1.gif" alt="">
         </div>
-        
-</div><!-- /.container -->
-
-<script>
-    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-
-const numBalls = 50;
-const balls = [];
-
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 93)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 93)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
-  
-  balls.push(ball);
-  document.body.append(ball);
-}
-
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
-  };
-
-  let anim = el.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    }
-  );
-});
-</script>
-
-
-
-
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+      </div>
+      <div class="work__logos">
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+      </div>
+      <div class="work__logos">
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+        <div class="logos__item">
+          <img src="img/work1.gif" alt="">
+        </div>
+      </div>
+    </div>
+      </div></section><!-- /.container -->
 
 
 </body>
