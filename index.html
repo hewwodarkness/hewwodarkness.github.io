@@ -24,50 +24,20 @@
 
 <!-- Features -->
 <div class="intro">
-    <h2 class="currentdevices">Current devices</h2>
+    <h2 class="currentdevices">My projects</h2>
     <!-- Features -->
     <div class="features">
+        <a href="playerssettings/index.html">
+            <div class="currentdevicesitem">
+                <img class="currentdevicesimg" src="img/anime1.gif" alt="">
+                <h1 class="devices__title">Players Settings</h1>
+            </div>
+        </a>
         <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="giphy.gif" alt="">
-            <a href="playerssettings/index.html"><h1 class="devices__title">Players Settings</h1></a>
+            <img class="currentdevicesimg" src="img/anime2.gif" alt="">
+            <h1 class="devices__title">Gallery</h1>
         </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/12.jpg" alt="">
-            <h1 class="devices__title">AOC I2476VWM Black</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/11.jpg" alt="">
-            <h1 class="devices__title">Logitech G305</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/14.jpg" alt="">
-            <h1 class="devices__title">Razer Gigantus Elite Speed Control</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/16.jpg" alt="">
-            <h1 class="devices__title">Corsair Strafe Cherry MX Red</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/17.jpg" alt="">
-            <h1 class="devices__title">Wacom Intuos Creative Pen Tablet CTL-480</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/18.jpg" alt="">
-            <h1 class="devices__title">Blue Yeti USB Microphone - Blackout Edition</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/19.jpg" alt="">
-            <h1 class="devices__title">Apple EarPods with Remote and Mic</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/20.jpg" alt="">
-            <h1 class="devices__title">Intel Core i7 7700 BOX</h1>
-        </div>
-        <div class="currentdevicesitem">
-            <img class="currentdevicesimg" src="img/21.jpg" alt="">
-            <h1 class="devices__title">Zotac Geforce GTX 1060 Amp Edition 3Gb GDDR5</h1>
-        </div>
-    </div>
+        
 </div><!-- /.container -->
 
 <script>
@@ -80,8 +50,8 @@ for (let i = 0; i < numBalls; i++) {
   let ball = document.createElement("div");
   ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 94)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 94)}vh`;
+  ball.style.left = `${Math.floor(Math.random() * 93)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 93)}vh`;
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
