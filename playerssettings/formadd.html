@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Отправка формы</title>
+ </head>
+ <body>
+    <div id="container">
+        <form id="myform">
+          <label>Имя:<input name="first_name" id="myform_first_name"/></label>
+          <label>Фамилия:<input name="last_name" id="myform_last_name"/></label>
+          <input type=submit>
+        </form>
+          </div>
+       <script lang="js">
+           document.getElementById("myform").onsubmit = function() {
+    var first_name = document.getElementById("myform_first_name");
+    var last_name = document.getElementById("myform_last_name");
+    document.write(first_name.value + "<br>" + last_name.value
+    
+    );
+}
+       </script>
+ </body>
+</html>
