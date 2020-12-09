@@ -64,7 +64,7 @@ print_r($_GET)
     </script>
 </div>
 <!-- Features -->
-<?php foreach($row as $row['id']): ?>
+
 <div class="intro">
     <div class="features">
         <div class="features__item">
@@ -272,7 +272,7 @@ print_r($_GET)
         </div>
     </div>
 </div>
-<?php endforeach; ?>
+
 <script>
     const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 
