@@ -81,13 +81,14 @@ $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 <div class="intro">
+<div class="csfeatures">
 	<?php foreach($row as $row): ?>
-		<div class="csfeatures">
         <div class="csplayers">
             <img class="csplayersimg" src=<?=$row['img']?> alt="">
             <a href="index.html"><h1 class="features__title"><?=$row['name']?></h1></a>
         </div>
 	<?php endforeach; ?>
+</div>
 </div>
 </body>
 </html>
