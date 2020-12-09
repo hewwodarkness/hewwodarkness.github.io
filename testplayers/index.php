@@ -27,6 +27,41 @@
 
 // $conn->close(); -->
 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/8.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<div class="header">
+    <div class="container">
+        <h2>Players and their settings</h2>
+    </div>
+</div>
+<div class="menutest">
+<div class="features1">
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">CS</h1>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Valorant</h1>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Main</h1>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Calculator</h1>
+    </div>
+
+</div>
 
 <?php
 $servername = "localhost";
@@ -45,45 +80,14 @@ $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //print "$row[dpi] | $row[hz]";
 
 ?>
-<!DOCTYPE HTML PUBLIC>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>Selected User</title>
-</head>
-<body>
+<div class="intro">
 	<?php foreach($row as $row): ?>
-		<div class="container">
- <div class="row">
-  <div class="col-md-9">
-   <div class="page-header">
-    <h1>Все записи:</h1>
-   </div>
-   <div class="row">
-    <div class="col-md-3">
-
-    </div>
-    <div class="col-md-9">
-     <h4><a href="#"><?=$row['dpi']?></a></h4>
-     <p>
-     
-     </p>
-     <p><a class="btn-info btn-sm" href="#">Читать полностью</a></p>
-     <br/>
-     <ul class="list-inline">
-      <li><i class="glyphicon glyphicon-list"></i><a href="#"> Категория: </a> | </li>
-      <li><i class="glyphicon glyphicon-calendar"></i> Sept 16th. 2012 | </li>
-      <li><i class="glyphicon glyphicon-comment"></i> by <a href="#">3 comments</a> | </li>
-     </ul>
-    </div>
-   </div>
-  </div>
-  <div class="col-md-3">
-   sidebar
-  </div>
- </div>
-</div>
+		<div class="csfeatures">
+        <div class="csplayers">
+            <img class="csplayersimg" src=<?=$row['img']?> alt="">
+            <a href="index.html"><h1 class="features__title"><?=$row['name']?></h1></a>
+        </div>
 	<?php endforeach; ?>
+</div>
 </body>
 </html>
