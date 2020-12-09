@@ -6,13 +6,17 @@
  </head>
  <body>
     <div id="container">
-        <form id="myform">
-          <label>Имя:<input name="first_name" id="myform_first_name"/></label>
-          <label>Фамилия:<input name="last_name" id="myform_last_name"/></label>
-          <input type=submit>
-        </form>
+      <form name="feedback" method="POST" action="index.php">
+        <label>Ваше имя: <input type="text" name="name"></label>
+        <label>Ваш email: <input type="text" name="email"></label>
+        <label>Сообщение: <textarea name="message"></textarea></label>
+      
+        <input type="submit" name="send" value="Отправить">
+      </form>
           </div>
-       <script lang="js">
+
+
+       <!-- <script lang="js">
            document.getElementById("myform").onsubmit = function() {
     var first_name = document.getElementById("myform_first_name");
     var last_name = document.getElementById("myform_last_name");
@@ -20,6 +24,6 @@
     
     );
 }
-       </script>
+       </script> -->
  </body>
 </html>
