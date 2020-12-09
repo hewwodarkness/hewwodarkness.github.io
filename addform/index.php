@@ -25,9 +25,12 @@ if ($conn->connect_error) {
 //         /* YOUR CODE */
 //     }
 // }
+$dpi = $_POST["dpi"];
+$hz = $_POST["hz"];
+$edpi = $_POST["edpi"];
 $id_1 = uniqid();
 $sql = "INSERT INTO main (id, dpi, hz, edpi)
-VALUES ('$id_1', '1', '2', '3')";
+VALUES ('$id_1', '$dpi', '$hz', '$edpi')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
