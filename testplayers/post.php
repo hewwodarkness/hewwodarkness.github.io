@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/8.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "players";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$sql_select = "SELECT * FROM main";
+$result = mysqli_query($conn, $sql_select);
+$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$id = $_GET['id'];
+print_r($_GET)
+?>
+
+<!-- Header -->
+<div class="header">
+    <div class="container">
+        <h2>Players and their settings</h2>
+    </div>
+</div>
+<!-- Menu -->
+<div class="menutest">
+<div class="features1">
+    <div class="currentdevicesitem1">
+        <a href="https://hewwodarkness.github.io/" title="Вернуться на предыдущую страницу">
+        <h1 class="features__title">Portfolio</h1></a>
+    </div>
+    <div class="currentdevicesitem1">
+        <a href="https://hewwodarkness.github.io/playerssettings/csplayers.html" id="myLink1"><h1 class="features__title">CS</h1></a>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Main</h1>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Calculator</h1>
+    </div>
+    <div class="currentdevicesitem1">
+        <h1 class="features__title">Add new player</h1>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+    $("#myLink").text("http://www.test.com/test");
+});
+    </script>
+</div>
+<!-- Features -->
+<?php foreach($row as $row['id']): ?>
+<div class="intro">
+    <div class="features">
+        <div class="features__item">
+            <img class="features__icon" src="img/2.png" alt="">
+            <h1 class="features__title">Starliet</h1>
+            <div class="features__text">An average player</div>
+            <div>
+                <i>
+                    <a href="https://twitter.com/virgowashere" target="_blank"><img class="two_icons" src="img/5.png"></a>
+                </i>
+                <i>
+                    <a href="https://steamcommunity.com/id/virgowashere" target="_blank"><img class="two_icons" src="img/6.png"></a>
+                </i>
+            </div>
+        </div>
+        <div class="mouse_settings">
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">DPI</h1>
+            <h4 class="setth4">1000</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">Sensitivity</h1> 
+            <h4 class="setth4">1.16</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">Zoom Sensitivity</h1>
+            <h4 class="setth4">0.881332</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">HZ</h1>
+            <h4 class="setth4">1000</h4>
+        </div>
+        <div class="mouse_settings">
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">Mouse Accel</h1>
+            <h4 class="setth4">0</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">Windows Sensitivity</h1>
+            <h4 class="setth4">5</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">Raw input</h1> 
+            <h4 class="setth4">1</h4>
+            <img class="settings_icon" src="img/10.png" alt="">
+            <h1 class="settings__title">eDPI</h1> 
+            <h4 class="setth4">680</h4>
+        </div>
+        
+    </div>
+
+    <!-- Alert -->
+    <div>
+        <div class="alert alert-info" role="alert">
+			<span class="alert-title">
+                Crosshair
+            </span>
+            <span class="alert-description" id="testtext">  
+                cl_crosshair_drawoutline "1"
+                cl_crosshair_dynamic_maxdist_splitratio "0.35"
+                cl_crosshair_dynamic_splitalpha_innermod "1"
+                cl_crosshair_dynamic_splitalpha_outermod "0.5"
+                cl_crosshair_dynamic_splitdist "7"
+                cl_crosshair_outlinethickness "1"
+                cl_crosshair_sniper_show_normal_inaccuracy "0"
+                cl_crosshair_sniper_width "1"
+                cl_crosshair_t "0"
+                cl_crosshairalpha "255"
+                cl_crosshaircolor "5"
+                cl_crosshaircolor_b "255"
+                cl_crosshaircolor_g "0"
+                cl_crosshaircolor_r "255"
+                cl_crosshairdot "0"
+                cl_crosshairgap "-1.000000"
+                cl_crosshairgap_useweaponvalue "0"
+                cl_crosshairscale "500"
+                cl_crosshairsize "2.000000"
+                cl_crosshairstyle "5"
+                cl_crosshairthickness "0.500000"
+                cl_crosshairusealpha "1"
+                cl_fixedcrosshairgap "-2"
+            </span>
+
+            <button class="jsbtn" id="cp_btn"><i class="fa fa-home"></i>Copy</button>
+            
+            <script lang="JavaScript">
+                document.getElementById("cp_btn").addEventListener("click", copy_password);
+
+                function copy_password() {
+                    var copyText = document.getElementById("testtext");
+                    var textArea = document.createElement("textarea");
+                    textArea.value = copyText.textContent;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand("Copy");
+                    textArea.remove();
+                }
+            </script>
+
+		</div>
+    </div>
+    <div>
+        <div class="alert alert-info" role="alert">
+			<span class="alert-title">
+                Viewmodel
+            </span>
+				<span class="alert-description" id="testtext1">  
+                    viewmodel_fov 68; 
+                    viewmodel_offset_x 2.5; 
+                    viewmodel_offset_y 0; 
+                    viewmodel_offset_z -1.5; 
+                    viewmodel_presetpos 3; 
+                    cl_viewmodel_shift_left_amt 1.5; 
+                    cl_viewmodel_shift_right_amt 0.75; 
+                    viewmodel_recoil 0; 
+                    cl_righthand 1;
+                </span>
+
+                <button class="jsbtn" id="cp_btn1"><i class="fa fa-home"></i>Copy</button>
+            
+                <script lang="JavaScript">
+                    document.getElementById("cp_btn1").addEventListener("click", copy_password);
+    
+                    function copy_password() {
+                        var copyText = document.getElementById("testtext1");
+                        var textArea = document.createElement("textarea");
+                        textArea.value = copyText.textContent;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand("Copy");
+                        textArea.remove();
+                    }
+                </script>
+    
+		</div>
+    </div>
+    <div>
+        <div class="alert alert-info" role="alert">
+			<span class="alert-title">
+                CL_BOB
+            </span>
+				<span class="alert-description" id="testtext2">  
+                    cl_bob_lower_amt 21; 
+                    cl_bobamt_lat 0.1; 
+                    cl_bobamt_vert 0.1; 
+                    cl_bobcycle 0.98;
+                </span>
+
+                <button class="jsbtn" id="cp_btn2"><i class="fa fa-home"></i>Copy</button>
+            
+                <script lang="JavaScript">
+                    document.getElementById("cp_btn2").addEventListener("click", copy_password);
+    
+                    function copy_password() {
+                        var copyText = document.getElementById("testtext2");
+                        var textArea = document.createElement("textarea");
+                        textArea.value = copyText.textContent;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand("Copy");
+                        textArea.remove();
+                    }
+                </script>
+		</div>
+    </div>
+
+    <h2 class="currentdevices">Current devices</h2>
+
+    <!-- Features -->
+    <div class="features">
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/13.png" alt="">
+            <h1 class="devices__title">Acer ED242QR</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/12.jpg" alt="">
+            <h1 class="devices__title">AOC I2476VWM Black</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/11.jpg" alt="">
+            <h1 class="devices__title">Logitech G305</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/14.jpg" alt="">
+            <h1 class="devices__title">Razer Gigantus Elite Speed Control</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/16.jpg" alt="">
+            <h1 class="devices__title">Corsair Strafe Cherry MX Red</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/17.jpg" alt="">
+            <h1 class="devices__title">Wacom Intuos Creative Pen Tablet CTL-480</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/18.jpg" alt="">
+            <h1 class="devices__title">Blue Yeti USB Microphone - Blackout Edition</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/19.jpg" alt="">
+            <h1 class="devices__title">Apple EarPods with Remote and Mic</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/20.jpg" alt="">
+            <h1 class="devices__title">Intel Core i7 7700 BOX</h1>
+        </div>
+        <div class="currentdevicesitem">
+            <img class="currentdevicesimg" src="img/21.jpg" alt="">
+            <h1 class="devices__title">Zotac Geforce GTX 1060 Amp Edition 3Gb GDDR5</h1>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+<script>
+    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 94)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 94)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+</script>
+
+
+
+
+
+
+</body>

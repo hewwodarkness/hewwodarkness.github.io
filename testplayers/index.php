@@ -77,15 +77,13 @@ $sql_select = "SELECT * FROM main";
 $result = mysqli_query($conn, $sql_select);
 $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//print "$row[dpi] | $row[hz]";
-
 ?>
 <div class="intro">
 <div class="csfeatures">
 	<?php foreach($row as $row): ?>
         <div class="csplayers">
             <img class="csplayersimg" src=<?=$row['img']?> alt="">
-            <a href="index.html"><h1 class="features__title"><?=$row['name']?></h1></a>
+            <a href="post.php?id=<?=$row['id']?>"><h1 class="features__title"><?=$row['name']?></h1></a>
         </div>
 	<?php endforeach; ?>
 </div>
