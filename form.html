@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>Отправка формы</title>
- </head>
- <body>
-    <div id="container">
-      <form name="feedback" method="POST" action="action.php">
-      <label>nick: <input type="text" name="name"></label>
-      <label>image IN URL just put link in it: <input type="text" name="img"></label>
-      <label>dpi: <textarea name="dpi"></textarea></label>
-    </div>
-    <div id="container">
-      <label>edpi: <input type="text" name="edpi"></label>
-      <label>hz: <input type="text" name="hz"></label>
-      <label>sens: <textarea name="sensitivity"></textarea></label>
-    </div>
-        <div id="container">
+   <head>
+      <meta charset="utf-8">
+      <title>Отправка формы</title>
+   </head>
+   <body>
+      <div id="container">
+         <form name="feedback" method="POST" action="action.php" enctype="multipart/form-data">
+            <label>nick: <input type="text" name="name"></label>
+            <!-- <label>image IN URL just put link in it: <input type="text" name="img"></label> -->
+            <label>dpi: <textarea name="dpi"></textarea></label>
+      </div>
+      <div id="container">
+          <label>edpi: <input type="text" name="edpi"></label>
+          <label>hz: <input type="text" name="hz"></label>
+          <label>sens: <textarea name="sensitivity"></textarea></label>
+      </div>
+      <div id="container">
           <label>zoom: <input type="text" name="zoom"></label>
           <label>mouse accel 0 or 1: <input type="text" name="mouseaccel"></label>
           <label>windows sens: <textarea name="windowssens"></textarea></label>
-          </div>
-          <div id="container">
-            <label>raw input 0 or 1: <input type="text" name="rawinput"></label>
-            <label>crosshair settings: <input type="text" name="crosshair"></label>
-            <label>viewmodel settings: <textarea name="viewmodel"></textarea></label>
-            <label>cl_bob settings: <textarea name="cl_bob"></textarea></label>
-            </div>
-        <input type="submit" name="send" value="Отправить">
+      </div>
+      <div id="container">
+          <label>raw input 0 or 1: <input type="text" name="rawinput"></label>
+          <label>crosshair settings: <input type="text" name="crosshair"></label>
+          <label>viewmodel settings: <textarea name="viewmodel"></textarea></label>
+          <label>cl_bob settings: <textarea name="cl_bob"></textarea></label>
+      </div>
+      <input type="file" 
+      name="my_image">
+
+      <input type="submit" name="send" value="Отправить">
       </form>
-          </div>
-
-
-       <!-- <script lang="js">
-           document.getElementById("myform").onsubmit = function() {
-    var first_name = document.getElementById("myform_first_name");
-    var last_name = document.getElementById("myform_last_name");
-    document.write(first_name.value + "<br>" + last_name.value
-    
-    );
-}
-       </script> -->
- </body>
+      </div>
+      <!-- <script lang="js">
+         document.getElementById("myform").onsubmit = function() {
+         var first_name = document.getElementById("myform_first_name");
+         var last_name = document.getElementById("myform_last_name");
+         document.write(first_name.value + "<br>" + last_name.value
+         
+         );
+         }
+         </script> -->
+   </body>
 </html>

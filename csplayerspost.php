@@ -12,22 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+<?php include "db_conn.php"; ?>  
 <?php
-$servername = "localhost";
-$username = "id15637309_root";
-$password = "t/i42|HRbb>bv7P^";
-$dbname = "id15637309_players";
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "players";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 $id = $_GET['id'];
 
 $sql_select = "SELECT * FROM main WHERE id =".$id;
@@ -36,7 +23,7 @@ $result = mysqli_query($conn, $sql_select);
 
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-print_r($_GET)
+//print_r($_GET)
 ?>
 
 <!-- Header -->
@@ -68,7 +55,7 @@ print_r($_GET)
 <div class="intro">
     <div class="features">
         <div class="features__item">
-            <img class="features__icon" src=<?=$row['img']?> alt="">
+            <img class="features__icon" src="uploads/<?=$row['img']?>" alt="">
             <h1 class="features__title"><?=$row['name']?></h1>
             <div class="features__text">An average player</div>
 

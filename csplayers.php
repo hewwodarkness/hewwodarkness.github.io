@@ -55,29 +55,16 @@
     <a href="csplayers.php"><h1 class="features__title">CS Players list</h1></a>
     </div>
     <div class="currentdevicesitem1">
-        <a href="form.html"><h1 class="features__title">Add player</h1>
+        <a href="form.html"><h1 class="features__title">Add player</h1></a>
     </div>
     <div class="currentdevicesitem1">
         <h1 class="features__title" style=" color: red">Calculator</h1>
     </div>
 
 </div>
-
+<?php include "db_conn.php"; ?>
 <?php
-$servername = "localhost";
-$username = "id15637309_root";
-$password = "t/i42|HRbb>bv7P^";
-$dbname = "id15637309_players";
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "players";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 $sql_select = "SELECT * FROM main";
 $result = mysqli_query($conn, $sql_select);
 $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -87,7 +74,7 @@ $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <div class="csfeatures">
 	<?php foreach($row as $row): ?>
         <div class="csplayers">
-            <img class="csplayersimg" src=<?=$row['img']?> alt="">
+            <img class="csplayersimg" src="uploads/<?=$row['img']?>" alt="">
             <a href="csplayerspost.php?id=<?=$row['id']?>"><h1 class="features__title"><?=$row['name']?></h1></a>
         </div>
 	<?php endforeach; ?>
