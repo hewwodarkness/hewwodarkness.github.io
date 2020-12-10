@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="uk">
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Settings</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/csplayersstyle.css">
     <link rel="shortcut icon" href="img/8.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,6 +13,32 @@
 </head>
 <body>
   
+<?php
+$servername = "localhost";
+$username = "id15637309_root";
+$password = "t/i42|HRbb>bv7P^";
+$dbname = "id15637309_players";
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "players";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$id = $_GET['id'];
+
+$sql_select = "SELECT * FROM main WHERE id =".$id;
+
+$result = mysqli_query($conn, $sql_select);
+
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+print_r($_GET)
+?>
+
 <!-- Header -->
 <div class="header">
     <div class="container">
@@ -23,68 +48,66 @@
 <!-- Menu -->
 <div class="menutest">
 <div class="features1">
-    <div class="currentdevicesitem1">
+<div class="currentdevicesitem1">
         <a href="index.html"><h1 class="features__title">Portfolio</h1><a>
     </div>
     <div class="currentdevicesitem1">
-    <a href="csplayers.php"><h1 class="features__title">CS Players list</h1></a>
+        <a href="csplayers.php"><h1 class="features__title">CS Players list</h1></a>
     </div>
     <div class="currentdevicesitem1">
-        <h1 class="features__title" style=" color: red">Valorant</h1>
+        <a href="form.html"><h1 class="features__title">Add player</h1></a>
     </div>
     <div class="currentdevicesitem1">
         <h1 class="features__title" style=" color: red">Calculator</h1>
     </div>
 
-    <script>
-        $(document).ready(function(){
-    $("#myLink").text("http://www.test.com/test");
-});
-    </script>
+ 
 </div>
 <!-- Features -->
+
 <div class="intro">
     <div class="features">
         <div class="features__item">
-            <img class="features__icon" src="img/2.png" alt="">
-            <h1 class="features__title">Starliet</h1>
+            <img class="features__icon" src=<?=$row['img']?> alt="">
+            <h1 class="features__title"><?=$row['name']?></h1>
             <div class="features__text">An average player</div>
+
             <div>
                 <i>
-                    <a href="https://twitter.com/virgowashere" target="_blank"><img class="two_icons" src="img/5.png"></a>
+                    <a href="" target="_blank"><img class="two_icons" src="img/5.png"></a>
                 </i>
                 <i>
-                    <a href="https://steamcommunity.com/id/virgowashere" target="_blank"><img class="two_icons" src="img/6.png"></a>
+                    <a href="" target="_blank"><img class="two_icons" src="img/6.png"></a>
                 </i>
             </div>
         </div>
         <div class="mouse_settings">
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">DPI</h1>
-            <h4 class="setth4">1000</h4>
+            <h4 class="setth4"><?=$row['dpi']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Sensitivity</h1> 
-            <h4 class="setth4">1.16</h4>
+            <h4 class="setth4"><?=$row['sensitivity']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Zoom Sensitivity</h1>
-            <h4 class="setth4">0.881332</h4>
+            <h4 class="setth4"><?=$row['zoom']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">HZ</h1>
-            <h4 class="setth4">1000</h4>
+            <h4 class="setth4"><?=$row['hz']?></h4>
         </div>
         <div class="mouse_settings">
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Mouse Accel</h1>
-            <h4 class="setth4">0</h4>
+            <h4 class="setth4"><?=$row['mouseaccel']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Windows Sensitivity</h1>
-            <h4 class="setth4">5</h4>
+            <h4 class="setth4"><?=$row['windowssens']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Raw input</h1> 
-            <h4 class="setth4">1</h4>
+            <h4 class="setth4"><?=$row['rawinput']?></h4>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">eDPI</h1> 
-            <h4 class="setth4">680</h4>
+            <h4 class="setth4"><?=$row['edpi']?></h4>
         </div>
         
     </div>
@@ -96,29 +119,7 @@
                 Crosshair
             </span>
             <span class="alert-description" id="testtext">  
-                cl_crosshair_drawoutline "1"
-                cl_crosshair_dynamic_maxdist_splitratio "0.35"
-                cl_crosshair_dynamic_splitalpha_innermod "1"
-                cl_crosshair_dynamic_splitalpha_outermod "0.5"
-                cl_crosshair_dynamic_splitdist "7"
-                cl_crosshair_outlinethickness "1"
-                cl_crosshair_sniper_show_normal_inaccuracy "0"
-                cl_crosshair_sniper_width "1"
-                cl_crosshair_t "0"
-                cl_crosshairalpha "255"
-                cl_crosshaircolor "5"
-                cl_crosshaircolor_b "255"
-                cl_crosshaircolor_g "0"
-                cl_crosshaircolor_r "255"
-                cl_crosshairdot "0"
-                cl_crosshairgap "-1.000000"
-                cl_crosshairgap_useweaponvalue "0"
-                cl_crosshairscale "500"
-                cl_crosshairsize "2.000000"
-                cl_crosshairstyle "5"
-                cl_crosshairthickness "0.500000"
-                cl_crosshairusealpha "1"
-                cl_fixedcrosshairgap "-2"
+            <?=$row['crosshair']?>
             </span>
 
             <button class="jsbtn" id="cp_btn"><i class="fa fa-home"></i>Copy</button>
@@ -145,15 +146,7 @@
                 Viewmodel
             </span>
 				<span class="alert-description" id="testtext1">  
-                    viewmodel_fov 68; 
-                    viewmodel_offset_x 2.5; 
-                    viewmodel_offset_y 0; 
-                    viewmodel_offset_z -1.5; 
-                    viewmodel_presetpos 3; 
-                    cl_viewmodel_shift_left_amt 1.5; 
-                    cl_viewmodel_shift_right_amt 0.75; 
-                    viewmodel_recoil 0; 
-                    cl_righthand 1;
+                    <?=$row['viewmodel']?>
                 </span>
 
                 <button class="jsbtn" id="cp_btn1"><i class="fa fa-home"></i>Copy</button>
@@ -180,10 +173,7 @@
                 CL_BOB
             </span>
 				<span class="alert-description" id="testtext2">  
-                    cl_bob_lower_amt 21; 
-                    cl_bobamt_lat 0.1; 
-                    cl_bobamt_vert 0.1; 
-                    cl_bobcycle 0.98;
+                <?=$row['cl_bob']?>
                 </span>
 
                 <button class="jsbtn" id="cp_btn2"><i class="fa fa-home"></i>Copy</button>
@@ -203,7 +193,7 @@
                 </script>
 		</div>
     </div>
-
+<?php if ($id == 1): ?>
     <h2 class="currentdevices">Current devices</h2>
 
     <!-- Features -->
@@ -249,8 +239,8 @@
             <h1 class="devices__title">Zotac Geforce GTX 1060 Amp Edition 3Gb GDDR5</h1>
         </div>
     </div>
-</div><!-- /.container -->
-
+</div>
+<?php endif ?>
 <script>
     const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 

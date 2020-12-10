@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.title__sections {
+	padding-top: 100px;
+	margin-bottom: 15px;
+	font-size: 44px;
+	font-weight: 600;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+.darck {
+	color: #222;
+}
+.light {
+	font-weight: 300;
+}
+.line__sections {
+	width: 98px;
+	height: 4px;
+	background-color: #fcac45;
+	display: block;
+	margin: 0 auto;
+}
+/*Header section*/
+
+/*Work section*/
+.work {
+
+}
+.work__text {
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 55px;
+	font-size: 16px;
+	color: #6c6c6c;
+	text-align: center;
+	font-style: italic;
+}
+.work__logo {
+	margin-top: 120px;
+    margin-bottom: 65px;
+    
+}
+
+.work__logos {
+	margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    animation-name: Appearance;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+}
+.logos__item
+{
+    width: 17,5%;
+    width: 385px;
+    height: 385px;
+    object-fit: cover;
+    overflow: hidden;
+    border: 4px #fcac45 ;
+    border-radius: 25px;
+    border-style: solid;
+}
+@-webkit-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-o-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes Appearance {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.work__logo img {
+	width: 100%;
+}
+
+/*testimonials section*/
+.testimonials {
+	background-color: #000;
+}
+
