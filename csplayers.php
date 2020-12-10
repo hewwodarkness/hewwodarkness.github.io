@@ -41,6 +41,8 @@
 </head>
 <body>
     <!-- Header -->
+   
+
 <div class="header">
     <div class="container">
         <h2>Players and their settings</h2>
@@ -52,10 +54,10 @@
         <a href="index.html"><h1 class="features__title">Portfolio</h1><a>
     </div>
     <div class="currentdevicesitem1">
-    <a href="csplayers.php"><h1 class="features__title">CS Players list</h1></a>
+      <a href="csplayers.php"><h1 class="features__title">CS Players list</h1></a>
     </div>
     <div class="currentdevicesitem1">
-        <a href="form.html"><h1 class="features__title">Add player</h1></a>
+      <a href="form.html"><h1 class="features__title">Add player</h1></a>
     </div>
     <div class="currentdevicesitem1">
         <h1 class="features__title" style=" color: red">Calculator</h1>

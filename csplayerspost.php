@@ -71,10 +71,18 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         <div class="mouse_settings">
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">DPI</h1>
-            <h4 class="setth4"><?=$row['dpi']?></h4>
+            <?php if($row['dpi'] == 0): ?>
+                <h4 class="setth4">None</h4>
+            <?php else:?>
+                <h4 class="setth4"><?=$row['dpi']?></h4>
+            <?php endif?>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Sensitivity</h1> 
-            <h4 class="setth4"><?=$row['sensitivity']?></h4>
+            <?php if($row['sensitivity'] == 0): ?>
+                <h4 class="setth4">None</h4>
+            <?php else:?>
+                <h4 class="setth4"><?=$row['sensitivity']?></h4>
+            <?php endif?>
             <img class="settings_icon" src="img/10.png" alt="">
             <h1 class="settings__title">Zoom Sensitivity</h1>
             <h4 class="setth4"><?=$row['zoom']?></h4>
@@ -100,33 +108,35 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     </div>
 
     <!-- Alert -->
-    <div>
-        <div class="alert alert-info" role="alert">
-			<span class="alert-title">
-                Crosshair
-            </span>
-            <span class="alert-description" id="testtext">  
-            <?=$row['crosshair']?>
-            </span>
 
-            <button class="jsbtn" id="cp_btn"><i class="fa fa-home"></i>Copy</button>
-            
-            <script lang="JavaScript">
-                document.getElementById("cp_btn").addEventListener("click", copy_password);
+    <?php if($row['crosshair'] == 0): ?>
+        <?php else:?>
+            <div>
+                <div class="alert alert-info" role="alert">
+                <span class="alert-title">
+                    Crosshair
+                </span>
+                <span class="alert-description" id="testtext">  
+                <?=$row['crosshair']?>
 
-                function copy_password() {
-                    var copyText = document.getElementById("testtext");
-                    var textArea = document.createElement("textarea");
-                    textArea.value = copyText.textContent;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand("Copy");
-                    textArea.remove();
-                }
-            </script>
+                <button class="jsbtn" id="cp_btn"><i class="fa fa-home"></i>Copy</button>
 
-		</div>
-    </div>
+                <script lang="JavaScript">
+                    document.getElementById("cp_btn").addEventListener("click", copy_password);
+
+                    function copy_password() {
+                        var copyText = document.getElementById("testtext");
+                        var textArea = document.createElement("textarea");
+                        textArea.value = copyText.textContent;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand("Copy");
+                        textArea.remove();
+                    }
+                </script>
+                </div>
+            </div>
+    <?php endif?>
     <div>
         <div class="alert alert-info" role="alert">
 			<span class="alert-title">
